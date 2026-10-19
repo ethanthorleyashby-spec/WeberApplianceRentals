@@ -2,9 +2,9 @@
 //  EDIT THESE THREE LINES — everything else updates itself.
 // ============================================================
 const SITE = {
-  phone: "(801) 555-0123",                                  // your business phone, as you want it shown
-  linkSet: "https://buy.stripe.com/REPLACE_WITH_SET_LINK",       // Stripe Payment Link for the $50 set
-  linkSingle: "https://buy.stripe.com/REPLACE_WITH_SINGLE_LINK", // Stripe Payment Link for the $30 single
+  phone: "(801) 784-8384",                                     // business phone, as shown on the site
+  linkSet: "https://buy.stripe.com/bJe00ifzfeCs9mrdbD2wU05",    // Stripe Payment Link: washer + dryer set ($50/month)
+  linkSingle: "https://buy.stripe.com/6oUfZgfzffGw7ejb3v2wU09", // Stripe Payment Link: single machine ($60 every 2 months)
 };
 // ============================================================
 
