@@ -5,10 +5,10 @@ Live site: https://weberappliancerentals.netlify.app
 A customer onboarding website for Weber Appliance Rentals, my subscription washer and dryer rental business serving Northern Utah.
 
 ## What it does
-- Collects new customer contact information
-- Presents rental terms and conditions for customers to sign
-- Takes payment through Stripe subscriptions
-- Logs customer records to a spreadsheet
+- Presents rental plans, pricing, and an FAQ for new customers
+- Links to full rental terms customers agree to before checkout
+- Sends customers to Stripe Payment Links that start automatic monthly subscriptions
+- Gives existing renters a one-click way to switch to autopay
 
 ## How I built it
 I built this with AI-assisted development: I used AI to generate and debug code, while I defined the requirements, tested the sign-up and payment flows, and deployed the site on Netlify.
