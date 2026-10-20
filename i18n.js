@@ -42,7 +42,7 @@ const ES = {
   "how.s1t": "Regístrate en línea",
   "how.s1": "Escoge un plan, escribe tus datos y dirección de entrega, acepta los términos de renta y agrega una tarjeta.",
   "how.s2t": "Entregamos e instalamos",
-  "how.s2": "Te mandamos un texto para fijar la hora de entrega, y luego llevamos las máquinas y las conectamos.",
+  "how.s2": "Justo después de pagar, escoge la hora de entrega que te funcione. Llevamos las máquinas y las conectamos.",
   "how.s3t": "Lava tu ropa",
   "how.s3": "Tu tarjeta se cobra automáticamente según tu plan. Si algo se descompone, mándanos un texto y nos encargamos.",
 
