@@ -126,3 +126,17 @@ footer a { color: var(--ink-soft); }
   .btn { width: 100%; text-align: center; }
   .switch .btn { width: 100%; }
 }
+
+/* Logo image + language toggle */
+.logo img { flex-shrink: 0; display: block; }
+.top-right { display: flex; align-items: center; gap: 12px; }
+.lang-btn {
+  font: inherit; font-size: 14px; font-weight: 800; color: var(--brand);
+  background: var(--card); border: 2px solid var(--brand); border-radius: 999px;
+  padding: 6px 14px; min-height: 36px; cursor: pointer;
+}
+.lang-btn:hover { background: #eef5fd; }
+@media (max-width: 520px) {
+  .logo { font-size: 15px; }
+  .lang-btn { padding: 4px 10px; font-size: 13px; }
+}

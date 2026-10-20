@@ -8,7 +8,9 @@ const SITE = {
 };
 // ============================================================
 
-document.addEventListener("DOMContentLoaded", () => {
+// Fills in the phone number, links and year. Runs on page load,
+// and again after the language toggle swaps the page's text.
+function fillSite() {
   const telHref = "tel:" + SITE.phone.replace(/[^0-9+]/g, "");
   const smsHref = "sms:" + SITE.phone.replace(/[^0-9+]/g, "");
   document.querySelectorAll("[data-phone]").forEach(el => (el.textContent = SITE.phone));
@@ -17,4 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-link-set]").forEach(el => (el.href = SITE.linkSet));
   document.querySelectorAll("[data-link-single]").forEach(el => (el.href = SITE.linkSingle));
   document.querySelectorAll("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
-});
+}
+
+document.addEventListener("DOMContentLoaded", fillSite);
