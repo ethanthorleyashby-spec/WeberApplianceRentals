@@ -1,10 +1,12 @@
 // ============================================================
-//  EDIT THESE THREE LINES — everything else updates itself.
+//  EDIT THESE LINES — everything else updates itself.
 // ============================================================
 const SITE = {
   phone: "(801) 784-8384",                                     // business phone, as shown on the site
   linkSet: "https://buy.stripe.com/bJe00ifzfeCs9mrdbD2wU05",    // Stripe Payment Link: washer + dryer set ($50/month)
   linkSingle: "https://buy.stripe.com/6oUfZgfzffGw7ejb3v2wU09", // Stripe Payment Link: single machine ($60 every 2 months)
+  existingSet: "https://buy.stripe.com/cNi5kCfzfcukaqvc7z2wU0b",   // Stripe Payment Link: EXISTING renters switching to autopay, set
+  existingSingle: "https://buy.stripe.com/5kQ14mgDjdyo8in0oR2wU0a", // Stripe Payment Link: EXISTING renters switching to autopay, single machine
   calendly: "https://calendly.com/ethan-thorley-ashby/delivery",                                                 // Calendly booking link for deliveries (shown on thanks.html)
 };
 // ============================================================
@@ -19,6 +21,8 @@ function fillSite() {
   document.querySelectorAll("[data-sms]").forEach(el => (el.href = smsHref));
   document.querySelectorAll("[data-link-set]").forEach(el => (el.href = SITE.linkSet));
   document.querySelectorAll("[data-link-single]").forEach(el => (el.href = SITE.linkSingle));
+  document.querySelectorAll("[data-link-existing-set]").forEach(el => (el.href = SITE.existingSet));
+  document.querySelectorAll("[data-link-existing-single]").forEach(el => (el.href = SITE.existingSingle));
   document.querySelectorAll("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
 }
 
