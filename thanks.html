@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-title-i18n="thanks.metaTitle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick your delivery time | Weber Appliance Rentals</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <img src="images/logo-icon.png" alt="" width="32" height="34">
+      Weber Appliance Rentals
+    </a>
+    <div class="top-right">
+      <button type="button" class="lang-btn" data-lang-toggle lang="es">Español</button>
+      <a class="top-call" data-tel href="#"><span class="label" data-i18n="nav.call">Call or text </span><span data-phone></span></a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:16px">
+    <h1 data-i18n="thanks.title">You're signed up!<br><span>Now pick your delivery time.</span></h1>
+    <p class="lead" data-i18n="thanks.lead">Choose a time below and we'll bring the machines and hook them up. We'll text you the day before to confirm.</p>
+  </div>
+
+  <div id="booking" class="booking"></div>
+
+  <div id="no-booking" class="area" hidden>
+    <h2 style="margin:0" data-i18n="thanks.fallbackTitle">We'll text you to schedule</h2>
+    <p data-i18n="thanks.fallback">Watch for a text from us in the next day to set your delivery time. Or text us now with a few times that work for you.</p>
+    <div class="btn-row" style="margin-top:16px">
+      <a class="btn btn-primary" data-sms href="#" data-i18n="contact.text">Text <span data-phone></span></a>
+    </div>
+  </div>
+
+  <p class="sub" style="margin:24px auto 48px;font-size:15px" data-i18n="thanks.help">Need a different time or have a question? Text us anytime.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span data-year></span> Weber Appliance Rentals · <a href="terms.html" data-i18n="footer.terms">Rental Terms</a>
+  </div>
+</footer>
+
+<script>
+  // Shows the Calendly scheduler if a link is set in config.js; otherwise a "we'll text you" note.
+  document.addEventListener("DOMContentLoaded", () => {
+    const box = document.getElementById("booking");
+    if (!SITE.calendly) {
+      box.hidden = true;
+      document.getElementById("no-booking").hidden = false;
+      return;
+    }
+    const lang = document.documentElement.lang === "es" ? "es" : "en";
+    const url = new URL(SITE.calendly);
+    url.searchParams.set("hide_gdpr_banner", "1");
+    url.searchParams.set("locale", lang);
+    const frame = document.createElement("iframe");
+    frame.src = url.toString();
+    frame.title = lang === "es" ? "Escoge tu hora de entrega" : "Pick your delivery time";
+    frame.loading = "lazy";
+    box.appendChild(frame);
+  });
+</script>
+</body>
+</html>

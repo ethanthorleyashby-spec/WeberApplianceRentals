@@ -72,6 +72,13 @@ const ES = {
   "contact.call": "Llamar",
 
   "footer.terms": "Términos de renta",
+
+  "thanks.metaTitle": "Escoge tu hora de entrega | Weber Appliance Rentals",
+  "thanks.title": "¡Ya estás registrado!<br><span>Ahora escoge tu hora de entrega.</span>",
+  "thanks.lead": "Escoge una hora abajo y te llevamos e instalamos las máquinas. Te mandamos un texto un día antes para confirmar.",
+  "thanks.fallbackTitle": "Te mandaremos un texto para programar",
+  "thanks.fallback": "Espera un texto de nosotros en el próximo día para fijar tu hora de entrega. O mándanos un texto ahora con algunas horas que te funcionen.",
+  "thanks.help": "¿Necesitas otra hora o tienes una pregunta? Mándanos un texto cuando quieras.",
 };
 
 const LANG_KEY = "war-lang";

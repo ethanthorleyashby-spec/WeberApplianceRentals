@@ -140,3 +140,8 @@ footer a { color: var(--ink-soft); }
   .logo { font-size: 15px; }
   .lang-btn { padding: 4px 10px; font-size: 13px; }
 }
+
+/* Delivery booking (thanks.html) */
+.booking { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.booking iframe { display: block; width: 100%; height: 760px; border: 0; }
+@media (max-width: 520px) { .booking iframe { height: 900px; } }
