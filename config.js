@@ -5,7 +5,7 @@ const SITE = {
   phone: "(801) 784-8384",                                     // business phone, as shown on the site
   linkSet: "https://buy.stripe.com/bJe00ifzfeCs9mrdbD2wU05",    // Stripe Payment Link: washer + dryer set ($50/month)
   linkSingle: "https://buy.stripe.com/6oUfZgfzffGw7ejb3v2wU09", // Stripe Payment Link: single machine ($60 every 2 months)
-  calendly: "https://calendly.com/ethan-thorley-ashby/30min",                                                 // Calendly booking link for deliveries (shown on thanks.html)
+  calendly: "https://calendly.com/ethan-thorley-ashby/delivery",                                                 // Calendly booking link for deliveries (shown on thanks.html)
 };
 // ============================================================
 
